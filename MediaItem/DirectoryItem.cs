@@ -12,17 +12,10 @@ using IMAPI2.Interop;
 
 namespace IMAPI2.MediaItem
 {
-    /// <summary>
-    /// 
-    /// </summary>
     class DirectoryItem : IMediaItem
     {
         private List<IMediaItem> mediaItems = new List<IMediaItem>();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="directoryPath"></param>
         public DirectoryItem(string directoryPath)
         {
             if (!Directory.Exists(directoryPath))
