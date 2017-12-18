@@ -15,7 +15,7 @@ namespace BurnMedia
 
     public partial class MainForm : Form
     {
-        private const string ClientName = "BurnMedia";
+        private const string ClientName = "CD Burner";
 
         private bool _isBurning;
         private bool _isFormatting;

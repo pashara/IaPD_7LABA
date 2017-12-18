@@ -35,7 +35,6 @@
             this.backgroundBurnWorker = new System.ComponentModel.BackgroundWorker();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.supportedMediaLabel = new System.Windows.Forms.Label();
             this.checkBoxEject = new System.Windows.Forms.CheckBox();
             this.textBoxLabel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.labelStatusText = new System.Windows.Forms.Label();
             this.buttonBurn = new System.Windows.Forms.Button();
             this.BurnerNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.supportedMediaLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // devicesComboBox
@@ -81,13 +81,6 @@
             // openFileDialog
             // 
             this.openFileDialog.Filter = "All Files (*.*)|*.*";
-            // 
-            // supportedMediaLabel
-            // 
-            this.supportedMediaLabel.Location = new System.Drawing.Point(12, 38);
-            this.supportedMediaLabel.Name = "supportedMediaLabel";
-            this.supportedMediaLabel.Size = new System.Drawing.Size(260, 63);
-            this.supportedMediaLabel.TabIndex = 12;
             // 
             // checkBoxEject
             // 
@@ -168,7 +161,7 @@
             // 
             // buttonDetectMedia
             // 
-            this.buttonDetectMedia.Location = new System.Drawing.Point(289, 144);
+            this.buttonDetectMedia.Location = new System.Drawing.Point(186, 144);
             this.buttonDetectMedia.Name = "buttonDetectMedia";
             this.buttonDetectMedia.Size = new System.Drawing.Size(98, 28);
             this.buttonDetectMedia.TabIndex = 23;
@@ -180,12 +173,12 @@
             // 
             this.statusProgressBar.Location = new System.Drawing.Point(12, 184);
             this.statusProgressBar.Name = "statusProgressBar";
-            this.statusProgressBar.Size = new System.Drawing.Size(375, 16);
+            this.statusProgressBar.Size = new System.Drawing.Size(664, 22);
             this.statusProgressBar.TabIndex = 27;
             // 
             // labelStatusText
             // 
-            this.labelStatusText.Location = new System.Drawing.Point(415, 173);
+            this.labelStatusText.Location = new System.Drawing.Point(305, 145);
             this.labelStatusText.Name = "labelStatusText";
             this.labelStatusText.Size = new System.Drawing.Size(227, 27);
             this.labelStatusText.TabIndex = 26;
@@ -194,9 +187,9 @@
             // 
             // buttonBurn
             // 
-            this.buttonBurn.Location = new System.Drawing.Point(12, 206);
+            this.buttonBurn.Location = new System.Drawing.Point(578, 145);
             this.buttonBurn.Name = "buttonBurn";
-            this.buttonBurn.Size = new System.Drawing.Size(160, 44);
+            this.buttonBurn.Size = new System.Drawing.Size(98, 27);
             this.buttonBurn.TabIndex = 25;
             this.buttonBurn.Text = "&Burn";
             this.buttonBurn.UseVisualStyleBackColor = true;
@@ -205,17 +198,23 @@
             // BurnerNotifyIcon
             // 
             this.BurnerNotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.BurnerNotifyIcon.BalloonTipTitle = "Burner";
-            this.BurnerNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("BurnerNotifyIcon.Icon")));
-            this.BurnerNotifyIcon.Text = "Burner";
+            this.BurnerNotifyIcon.BalloonTipTitle = "Laba7 CD Burn";
+            this.BurnerNotifyIcon.Text = "Laba7 CD Burn";
             this.BurnerNotifyIcon.Visible = true;
             this.BurnerNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.BurnerNotifyIcon_MouseDoubleClick);
+            // 
+            // supportedMediaLabel
+            // 
+            this.supportedMediaLabel.Location = new System.Drawing.Point(12, 38);
+            this.supportedMediaLabel.Name = "supportedMediaLabel";
+            this.supportedMediaLabel.Size = new System.Drawing.Size(260, 63);
+            this.supportedMediaLabel.TabIndex = 12;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 256);
+            this.ClientSize = new System.Drawing.Size(682, 214);
             this.Controls.Add(this.statusProgressBar);
             this.Controls.Add(this.labelStatusText);
             this.Controls.Add(this.buttonBurn);
@@ -232,7 +231,7 @@
             this.Controls.Add(this.selectCdLabel);
             this.Controls.Add(this.devicesComboBox);
             this.Name = "MainForm";
-            this.Text = "Burner";
+            this.Text = "Laba7 CD Burn";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
@@ -248,7 +247,6 @@
         private System.ComponentModel.BackgroundWorker backgroundBurnWorker;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Label supportedMediaLabel;
         private System.Windows.Forms.CheckBox checkBoxEject;
         private System.Windows.Forms.TextBox textBoxLabel;
         private System.Windows.Forms.Label label2;
@@ -262,6 +260,7 @@
         private System.Windows.Forms.Label labelStatusText;
         private System.Windows.Forms.Button buttonBurn;
         private System.Windows.Forms.NotifyIcon BurnerNotifyIcon;
+        private System.Windows.Forms.Label supportedMediaLabel;
     }
 }
 

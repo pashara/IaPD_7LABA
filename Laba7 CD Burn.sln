@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurnMedia", "BurnMedia.csproj", "{3B8FDB66-1D5A-4533-9F51-2D693BF0EF23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba7 CD Burn", "Laba7 CD Burn.csproj", "{3B8FDB66-1D5A-4533-9F51-2D693BF0EF23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
