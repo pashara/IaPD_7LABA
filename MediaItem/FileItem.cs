@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 using IMAPI2.Interop;
+using System.ComponentModel;
 
 namespace IMAPI2.MediaItem
 {
@@ -16,8 +17,16 @@ namespace IMAPI2.MediaItem
     /// 
     /// </summary>
     class FileItem : IMediaItem
-    {
-        private const Int64 SECTOR_SIZE = 2048;
+    {        
+
+        [DllImport("kernel32.dll")]
+        static extern uint GetCompressedFileSizeW([In, MarshalAs(UnmanagedType.LPWStr)] string lpFileName,
+           [Out, MarshalAs(UnmanagedType.U4)] out uint lpFileSizeHigh);
+
+        [DllImport("kernel32.dll", SetLastError = true, PreserveSig = true)]
+        static extern int GetDiskFreeSpaceW([In, MarshalAs(UnmanagedType.LPWStr)] string lpRootPathName,
+           out uint lpSectorsPerCluster, out uint lpBytesPerSector, out uint lpNumberOfFreeClusters,
+           out uint lpTotalNumberOfClusters);
 
         private Int64 m_fileLength = 0;
 
@@ -68,7 +77,15 @@ namespace IMAPI2.MediaItem
             {
                 if (m_fileLength > 0)
                 {
-                    return ((m_fileLength / SECTOR_SIZE) + 1) * SECTOR_SIZE;
+                    FileInfo info = new FileInfo(Path);
+                    uint dummy, sectorsPerCluster, bytesPerSector;
+                    int result = GetDiskFreeSpaceW(info.Directory.Root.FullName, out sectorsPerCluster, out bytesPerSector, out dummy, out dummy);
+                    if (result == 0)
+                    {
+                        throw new Win32Exception();
+                    }
+                    uint clusterSize = sectorsPerCluster * bytesPerSector;
+                    return ((m_fileLength + clusterSize - 1) / clusterSize) * clusterSize;
                 }
 
                 return 0;
