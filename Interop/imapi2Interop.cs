@@ -3899,52 +3899,7 @@ namespace IMAPI2.Interop
     public class MsftDiscRecorder2Class
     {
     }
-
-
-    [ComImport]
-    [Guid("27354135-7F64-5B0F-8F00-5D77AFBE261E")]
-    [CoClass(typeof(MsftWriteEngine2Class))]
-    public interface MsftWriteEngine2 : IWriteEngine2, DWriteEngine2_Event
-    {
-    }
-
-    [ComImport]
-    [Guid("2735412C-7F64-5B0F-8F00-5D77AFBE261E")]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    [ComSourceInterfaces("DWriteEngine2Events\0")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class MsftWriteEngine2Class
-    {
-    }
-
-    [ComImport]
-    [CoClass(typeof(MsftWriteSpeedDescriptorClass))]
-    [Guid("27354144-7F64-5B0F-8F00-5D77AFBE261E")]
-    public interface MsftWriteSpeedDescriptor : IWriteSpeedDescriptor
-    {
-    }
-
-    [ComImport]
-    [ClassInterface(ClassInterfaceType.None)]
-    [Guid("27354123-7F64-5B0F-8F00-5D77AFBE261E")]
-    public class MsftWriteSpeedDescriptorClass
-    {
-    }
-
-    [ComImport]
-    [CoClass(typeof(BootOptionsClass))]
-    [Guid("2C941FD4-975B-59BE-A960-9A2A262853A5")]
-    public interface BootOptions : IBootOptions
-    {
-    }
-
-    [ComImport]
-    [ClassInterface(ClassInterfaceType.None)]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    [Guid("2C941FCE-975B-59BE-A960-9A2A262853A5")]
-    public class BootOptionsClass
-    {
-    }
+    
 
     [ComImport]
     [Guid("2C941FDA-975B-59BE-A960-9A2A262853A5")]
@@ -3960,47 +3915,7 @@ namespace IMAPI2.Interop
     {
     }
 
-    [ComImport]
-    [Guid("2C941FD6-975B-59BE-A960-9A2A262853A5")]
-    [CoClass(typeof(EnumProgressItemsClass))]
-    public interface EnumProgressItems : IEnumProgressItems
-    {
-    }
-
-    [ComImport]
-    [ClassInterface(ClassInterfaceType.None)]
-    [Guid("2C941FCA-975B-59BE-A960-9A2A262853A5")]
-    public class EnumProgressItemsClass
-    {
-    }
-
-    [ComImport]
-    [Guid("2C941FD8-975B-59BE-A960-9A2A262853A5")]
-    [CoClass(typeof(FileSystemImageResultClass))]
-    public interface FileSystemImageResult : IFileSystemImageResult
-    {
-    }
-
-    [ComImport]
-    [Guid("2C941FCC-975B-59BE-A960-9A2A262853A5")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class FileSystemImageResultClass
-    {
-    }
-
-    [ComImport]
-    [Guid("F7FB4B9B-6D96-4D7B-9115-201B144811EF")]
-    [CoClass(typeof(FsiDirectoryItemClass))]
-    public interface FsiDirectoryItem : IFsiDirectoryItem2
-    {
-    }
-
-    [ComImport]
-    [ClassInterface(ClassInterfaceType.None)]
-    [Guid("2C941FC8-975B-59BE-A960-9A2A262853A5")]
-    public class FsiDirectoryItemClass
-    {
-    }
+    
 
     [ComImport]
     [CoClass(typeof(FsiFileItemClass))]
@@ -4061,34 +3976,7 @@ namespace IMAPI2.Interop
     }
 
 
-
-    [ComImport]
-    [Guid("2C941FD5-975B-59BE-A960-9A2A262853A5")]
-    [CoClass(typeof(ProgressItemClass))]
-    public interface ProgressItem : IProgressItem
-    {
-    }
-
-    [ComImport]
-    [Guid("2C941FCB-975B-59BE-A960-9A2A262853A5")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class ProgressItemClass
-    {
-    }
-
-    [ComImport]
-    [Guid("2C941FD7-975B-59BE-A960-9A2A262853A5")]
-    [CoClass(typeof(ProgressItemsClass))]
-    public interface ProgressItems : IProgressItems
-    {
-    }
-
-    [ComImport]
-    [Guid("2C941FC9-975B-59BE-A960-9A2A262853A5")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class ProgressItemsClass
-    {
-    }
+    
 }
 
 
